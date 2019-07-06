@@ -6,7 +6,7 @@
                 Menu <i class="fa fa-bars"></i>
             </button>
             <a class="navbar-brand page-scroll" href="/">
-                <span class="light"><img class="shield-icon" src="/assets/img/shield.png">Word Goal</span>
+                <span class="light"><img class="shield-icon" src="/assets/img/logo1.jpg">KIPP</span>
             </a>
         </div>
 
@@ -18,9 +18,9 @@
                     <a href="#page-top"></a>
                 </li>
                 
-                <li>
-                    <a class="page-scroll" href="/pricing/">Pricing</a>
-                </li>
+                {{!-- <li>
+                    <a class="page-scroll" href="/data/">Pricing</a>
+                </li> --}}
                 {{#if isAuthenticated}}
                     <li>
                         <a class="page-scroll" href="/trips/">My Trips</a>
@@ -30,7 +30,7 @@
                     </li>
                 {{else}}
                     <li>
-                        <a class="page-scroll" data-toggle="modal" data-target="#login-modal">Login/Sign Up</a>
+                        <a class="page-scroll" data-toggle="modal" data-target="#login-modal">Login</a>
                     </li>
                 {{/if}}
             </ul>
