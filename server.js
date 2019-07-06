@@ -1,16 +1,20 @@
 // Dependencies
 // ============
-const express        = require('express');
-const path           = require('path');
-const logger         = require('morgan');
-const session        = require('express-session'); 
-const passport 			 = require("./config/passport");
-const config				 = require("./config/extra-config");
+var express        = require('express');
+var path           = require('path');
+var logger         = require('morgan');
+var session        = require('express-session'); 
+var passport 			 = require("./config/passport");
+var config				 = require("./config/extra-config");
 // Express settings
 // ================
 
-// instantiate our app
-const app            = express();
+// // instantiate our app
+// var app            = express();
+
+// Express setup
+var app = express();
+var PORT = process.env.PORT || 3000;
 
 //allow sessions
 // app.use(session({ secret: 'booty Mctootie', cookie: { maxAge: 60000 }}));
@@ -19,14 +23,14 @@ const app            = express();
 app.set('views', path.join(__dirname, 'views'));
 
 //set up handlebars
-const exphbs = require('express-handlebars');
+var exphbs = require('express-handlebars');
 app.engine('handlebars', exphbs({
     defaultLayout: 'main'
 }));
 app.set('view engine', 'handlebars');
 
-const isAuth 				 = require("./config/middleware/isAuthenticated");
-const authCheck 		 = require('./config/middleware/attachAuthenticationStatus');
+var isAuth 				 = require("./config/middleware/isAuthenticated");
+var authCheck 		 = require('./config/middleware/attachAuthenticationStatus');
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));
@@ -45,7 +49,7 @@ require('./routes')(app);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  const err = new Error('Not Found');
+  var err = new Error('Not Found');
   err.status = 404;
   next(err);
 });
