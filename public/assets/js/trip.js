@@ -10,19 +10,19 @@ var userId;
 var updating = false;
 
 function submitTrip(trip) {
-  $.post("/trips/new", trip, function() {
-    window.location.href = "/trips";
+  $.post("/inputData/new", trip, function() {
+    window.location.href = "/inputData";
   });
 }
 
 function updateTrip(trip) {
     $.ajax({
       method: "PUT",
-      url: "/trips",
+      url: "/inputData",
       data: trip
     })
     .done(function() {
-      window.location.href = "/trips";
+      window.location.href = "/inputData";
     });
   }
 

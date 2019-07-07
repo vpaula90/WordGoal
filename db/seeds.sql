@@ -22,7 +22,3 @@ INSERT INTO students (last_name,  first_name, homeroom_id, grade_level, word_goa
 VALUES ('Serrano', 'Miguel', 'LSU', 8, 100000, 12541);
 INSERT INTO students (last_name,  first_name, homeroom_id, grade_level, word_goal, word_count)
 VALUES ('Lazo', 'Justin', 'LSU', 8, 100000, 0);
-
-
-
-
