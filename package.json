@@ -9,14 +9,11 @@
     "url": "https://github.com/OSP123/TravelSecure"
   },
   "scripts": {
-    "start": "nodemon ./bin/www"
-  },
-  "devDependencies": {
-    "font-awesome": "^4.6.3"
+    "start": "nodemon ./bin/www" 
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/OSP123/TravelSecure.git"
+    "url": "https://github.com/vpaula90/WordGoal.git"
   },
   "dependencies": {
     "bcrypt": "^3.0.6",
