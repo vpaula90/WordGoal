@@ -26,5 +26,6 @@ CREATE TABLE students (
     grade_level INT (255) NOT NULL,
     word_goal INT (255) NOT NULL,
     word_count INT (255) NOT NULL,
+
 	PRIMARY KEY ( id )
 );
