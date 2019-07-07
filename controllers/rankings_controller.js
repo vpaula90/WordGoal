@@ -1,7 +1,7 @@
 var db  = require('../models');
 
 exports.index = function(req, res) {
-  res.render('data/wordcount');
+  res.render('data/ranking');
 };
 
 exports.createTrip = function(req, res) {
