@@ -11,7 +11,7 @@ CREATE TABLE teachers (
     first_name VARCHAR (255) NOT NULL,
     homeroom_id VARCHAR ( 255) NOT NULL,
     username VARCHAR (255) NOT NULL,
-    password VARCHAR (255), NOT NULL,
+    password VARCHAR (255) NOT NULL,
     grade_level INT (255) NOT NULL,
 	PRIMARY KEY ( id )
 );
@@ -26,5 +26,6 @@ CREATE TABLE students (
     grade_level INT (255) NOT NULL,
     word_goal INT (255) NOT NULL,
     word_count INT (255) NOT NULL,
+
 	PRIMARY KEY ( id )
 );
