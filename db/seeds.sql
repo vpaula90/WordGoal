@@ -11,18 +11,14 @@ VALUES ('Hamilton', 'Jamar', 'LSU', 8, 'jhamilton@kippsocal.org', 'kippla123');
 
 
 INSERT INTO students (last_name,  first_name, homeroom_id, grade_level, word_goal, word_count)
-VALUES ('Antonio', 'Aiden', 'DePaul', 8, 100000, 112,022);
+VALUES ('Antonio', 'Aiden', 'DePaul', 8, 100000, 112022);
 INSERT INTO students (last_name,  first_name, homeroom_id, grade_level, word_goal, word_count)
-VALUES ('Olivarez', 'Alizey', 'DePaul', 8, 100000, 81,739);
+VALUES ('Olivarez', 'Alizey', 'DePaul', 8, 100000, 81739);
 INSERT INTO students (last_name,  first_name, homeroom_id, grade_level, word_goal, word_count)
-VALUES ('Osorio', 'Jesse', 'DePaul', 8, 100000, 16,943);
+VALUES ('Osorio', 'Jesse', 'DePaul', 8, 100000, 16943);
 INSERT INTO students (last_name,  first_name, homeroom_id, grade_level, word_goal, word_count)
-VALUES ('Estevez', 'Christopher', 'LSU', 8, 100000, 1103,711);
+VALUES ('Estevez', 'Christopher', 'LSU', 8, 100000, 1103711);
 INSERT INTO students (last_name,  first_name, homeroom_id, grade_level, word_goal, word_count)
-VALUES ('Serrano', 'Miguel', 'LSU', 8, 100000, 12,541);
+VALUES ('Serrano', 'Miguel', 'LSU', 8, 100000, 12541);
 INSERT INTO students (last_name,  first_name, homeroom_id, grade_level, word_goal, word_count)
 VALUES ('Lazo', 'Justin', 'LSU', 8, 100000, 0);
-
-
-
-
