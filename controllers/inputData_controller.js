@@ -8,7 +8,7 @@ exports.index = function(req, res) {
   }).then(function(dbTrip) {
     console.log(dbTrip);
     res.render('inputData/inputData.handlebars', {
-      layout: 'main-input',
+      layout: 'students',
       inputData: dbTrip
     });
   });
