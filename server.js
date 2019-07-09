@@ -46,6 +46,7 @@ app.use(authCheck);
 
 
 require('./routes')(app);
+// import {router} from "../WordGoal/routes/users"
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
