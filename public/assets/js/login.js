@@ -12,6 +12,8 @@ $(document).ready(function() {
       password: passwordInput.val().trim()
     };
 
+    // console.log(userData);
+
     if (!userData.username) {
       usernameInput.css("border", "solid 1px red");
       $("#username-feedback").text("Please enter a username");
