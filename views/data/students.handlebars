@@ -1,36 +1,96 @@
-    <link rel="stylesheet" href="/assets/css/data.css">
-    {{> nav }}
-    {{> login-modal }}
-    
-    <!-- Plans -->
-    <section id="plans">
-        <div class="container">
-            <div class="row">
+<link rel="stylesheet" href="/assets/css/data.css">
 
-              
+{{> nav }}
+{{!-- {{> login-modal }} --}}
 
-                <!-- item -->
-                <div class="col-md-4 text-center">
-                    <div class="panel panel-warning panel-pricing">
-                        <div class="panel-heading" id="rankings">
-                            <i class="fa fa-table"></i>
-                            <h3>Class Rankings</h3>
-                        </div>
-                       
-                        <ul class="list-group text-center">
-                            <li class="list-group-item"><i class="fa fa-"></i> Rankings for All Homerooms/Grades</li>
-                            {{!-- <li class="list-group-item"><i class="fa fa-check"></i> Unlimited projects</li>
-                            <li class="list-group-item"><i class="fa fa-check"></i> 27/7 support</li> --}}
-                        </ul>
-                        <div class="panel-footer">
-                            <a class="btn btn-lg btn-block btn-info" href="/rankings">Click Here</a>
-                        </div>
+<!-- Plans -->
+<section id='dataInfo'>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="classroom">
+                    <select id="homeroom">
+                        <option value="UTA">UTA</option>
+                        <option value="NYU">NYU</option>
+                        <option value="DePaul">DePaul</option>
+                        <option value="LSU">LSU</option>
+                    </select>
+                    <div class="button">
+                        <button class="btn btn-info" id="searchButton">Get Data</button>
                     </div>
                 </div>
-                <!-- /item -->
 
-               
+
+                <ul>
+                    HEYYY
+                    {{#each arr}}
+                        <li>
+                            <p>Name: {{first_name}}</p>
+                            <p>Word Count: {{word_count}}</p>
+                        </li>
+                    {{/each}}
+                </ul>
+            <br>
+            <table class="table" id="met">
+                <thead>
+                    <tr>
+                        <h4>Student Who Met the Goal</h4>
+                        <th scope="col">First Name</th>
+                        <th scope="col">Last Name</th>
+                        {{!-- <th scope="col">HomeRoom</th> --}}
+                <th scope="col">Word Count</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr id="studentmet">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <!-- Insert additional movie rows here -->
+                </tbody>
+                </table>
+                <br>
+                <table class="table" id="almostmet">
+                    <thead>
+                        <tr>
+                            <h4>Student Who Almost Met the Goal</h4>
+                            <th scope="col">First Name</th>
+                            <th scope="col">Last Name</th>
+                            {{!-- <th scope="col">HomeRoom</th> --}}
+                            <th scope="col">Word Count</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="studentalmostmet">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <!-- Insert additional movie rows here -->
+                    </tbody>
+                </table>
+                <br>
+                <table class="table" id="notmet">
+                    <thead>
+                        <tr>
+                            <h4>Student Who Didn't the Goal</h4>
+                            <th scope="col">First Name</th>
+                            <th scope="col">Last Name</th>
+                            {{!-- <th scope="col">HomeRoom</th> --}}
+                            <th scope="col">Word Count</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="studentnotmet">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <!-- Insert additional movie rows here -->
+                    </tbody>
+                </table>
+
             </div>
         </div>
-    </section>
-    <!-- /Plans -->
+</section>

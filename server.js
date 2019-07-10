@@ -14,7 +14,7 @@ var config				 = require("./config/extra-config");
 
 // Express setup
 var app = express();
-var PORT = process.env.PORT || 3000;
+
 
 //allow sessions
 // app.use(session({ secret: 'booty Mctootie', cookie: { maxAge: 60000 }}));

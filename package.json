@@ -9,7 +9,7 @@
     "url": "https://github.com/OSP123/TravelSecure"
   },
   "scripts": {
-    "start": "nodemon ./bin/www" 
+    "start": "nodemon ./bin/www"
   },
   "repository": {
     "type": "git",
@@ -26,7 +26,7 @@
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
     "path": "^0.12.7",
-    "sequelize": "^5.8.12"
+    "sequelize": "^5.9.4"
   },
   "engines": {
     "node": "7.8.0"
