@@ -446,6 +446,15 @@ p {
   border-color: black;
 
 }
+#dataInfo {
+  color: black;
+  margin-top: 15%;
+  text-align: center;
 
+}
+/* 
+img {
+  padding-top: 40px;
+} */
 
 /* Login CSS End */
