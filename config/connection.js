@@ -5,13 +5,13 @@ var mysql = require("mysql");
 
 
 
-// Changed to my local database
+
 var connection = mysql.createConnection({
-  host: "127.0.0.1",
+  host: "k2pdcy98kpcsweia.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
   port: 3306,
-  user: "root",
-  password: "MySql!23",
-  database: "wordgoal_db"
+  user: "jmr9jzoec8vkakow",
+  password: "eb5b9i53w9u00ys5",
+  database: "h5jo4daodh8fgcgq"
 });
 
 // Connect to the database
@@ -25,3 +25,5 @@ connection.connect(function(err) {
 
 // Export connection
 module.exports = connection;
+
+
