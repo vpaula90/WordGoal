@@ -8,7 +8,7 @@
         <div class="row">
             <div class="col-md-8 offset-md-2">
                 <div class="author-container">
-                    <h1>StuÎdent Roster</h1>
+                    <h1>Student Roster</h1>
                     <table class="table table-striped">
                         <thead>
                             <tr>
@@ -16,6 +16,7 @@
                                 <th>Last Name</th>
                                 <th>Word Goal</th>
                                 <th>Word Count</th>
+                                <th>Update Word Count</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -25,16 +26,14 @@
                                 <td>{{last_name}}</td>
                                 <td>{{word_goal}}</td>
                                 <td>{{word_count}}</td>
+                                <td><input placeholder={{word_count}} id="author-name" type="text" /></td>
                             </tr>
                             {{/each}}
                         </tbody>
                     </table>
                   
                         <form id="author-form">
-                            <td colspan="4">
-                                <input placeholder="Enter a name" id="author-name" type="text" />
-                            </td>
-                            <td><button type="submit" class="btn btn-success">Create Author</button>
+                            <td><button type="submit" class="btn btn-success">Update Word Count</button>
                             </td>
                         </form>
                    
