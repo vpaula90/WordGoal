@@ -29,3 +29,15 @@ CREATE TABLE students (
 
 	PRIMARY KEY ( id )
 );
+
+
+ CREATE TABLE  Users (
+    id INTEGER NOT NULL auto_increment,
+    username VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL, 
+    createdAt DATETIME NOT NULL,    
+    updatedAt DATETIME NOT NULL, 
+    PRIMARY KEY (id)
+
+ );
