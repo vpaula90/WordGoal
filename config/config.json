@@ -8,7 +8,7 @@
   },
   "test": {
     "username": "root",
-    "password": "brasilia1",
+    "password": "MySql!23",
     "database": "wordgoal_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
