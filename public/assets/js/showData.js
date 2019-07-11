@@ -8,41 +8,24 @@ $(document).ready(function(){
             for (var i = 0; i < dataInfo.length; i++){
                 console.log("finally", dataInfo[i]);
                 if (dataInfo[i].word_count > 100000) {
-                    
-            }
-
-
-
-
-
-            var dataInfo = res.here;
-            console.log("this is the console", res);
-            var dataInfo = res.here;
-            for (var i = 0; i < dataInfo.length; i++){
-                // console.log("finally", dataInfo[i]);
-
-                if (dataInfo[i].word_count > 100000) {
-                    // console.log("students who read ",  dataInfo[i]);
-                    var tBody1 = $("tbody, #met");
-                    var tRow1 = $("<tr>, #studentmet");
+                     // console.log("students who read ",  dataInfo[i]);
+                    var tBody = $("tbody");
+                    var tRow = $("<tr>");
                     var test = $("<td>").text(dataInfo[i].first_name);
                     var lastName =  $("<td>").text(dataInfo[i].last_name);
                     // var goalAlmostMet = $("<td>").text(dataInfo[i].homeroom_id);
                     var wordCount =  $("<td>").text(dataInfo[i].word_count);
-                        // console.log(dataInfo[0].word_count);
-                    tRow1.append(test, lastName, wordCount);
-                    tBody1.append(tRow1);//appending the table row to table body
+                    // console.log(dataInfo[0].word_count);
+                    tRow.append(test, lastName, wordCount);
+                    tBody.append(tRow);//appending the table row to table body
 
-                } 
+                }
+                    
+            }  
 
-            }
-          
-
-        };
+        });
 
     });
-
-});
 
 });
 

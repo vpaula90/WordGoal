@@ -5,7 +5,7 @@ exports.index = function(req, res) {
   res.render('data/students');
 };
 
-exports.createTrip = function(req, res) {x
+exports.createTrip = function(req, res) {
 
   console.log(req.user);
   // Add id from User onto req.body
@@ -24,8 +24,14 @@ exports.display = function(req, res) {
       });
   
       // console.log(data)
-      // res.render("data/students", { arr: data })
+      // res.render("data/students", {data: data.here })
     });
+
+}
+
+
+
+
 
     //res.render('showdData', {here: result})
     // var queryString = "SELECT * FROM students";
@@ -36,4 +42,3 @@ exports.display = function(req, res) {
     //     here: result
     //     });
     // });
-}
