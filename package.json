@@ -10,9 +10,13 @@
   },
   "scripts": {
 <<<<<<< HEAD
+    "start": "nodemon ./bin/www" 
+=======
+<<<<<<< HEAD
     "start": "nodemon ./bin/www"
 =======
     "start": "node ./bin/www" 
+>>>>>>> master
 >>>>>>> master
   },
   "repository": {
