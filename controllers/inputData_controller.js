@@ -1,7 +1,20 @@
 var db  = require('../models');
 
 exports.index = function(req, res) {
-  res.render('data/wordcount');
+  db.Student.findAll({raw: true}).then(function(data) {
+    console.log('hello');
+    // res.json({
+    //   here: data
+    // });
+ // console.log(data)
+    // res.render("data/students", { arr: data })
+  // res.render('data/wordcount');
+    var hbobj = {
+      students:data
+    }
+    res.render("data/wordcount", hbobj)
+   
+  })
 };
 
 exports.createTrip = function(req, res) {
