@@ -5,14 +5,15 @@ var showData_controller = require('../controllers/showData_controller');
 var isAuthenticated = require("../config/middleware/isAuthenticated");
 
 
-router.get('/', showData_controller.index);
-
-router.post('/new', isAuthenticated, showData_controller.createTrip);
+router.get('/', showData_controller.getStudentData);
 
 // router get accessing the database with students info
-router.get('/dataInfo', showData_controller.display);
+// router.get('/showData', showData_controller.getStudentData);
 
+// //the controller.display was created by Omar
+// router.get('/showData', showData_controller.display);
 
+// 
 // var queryString = "SELECT * FROM students WHERE word_count > 100000";
 // // router get accessing the database with students info
 // router.get("/dataInfo", function(req, res) {
