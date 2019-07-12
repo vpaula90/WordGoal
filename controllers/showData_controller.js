@@ -20,9 +20,12 @@ exports.display = function(req, res) {
     db.Student.findAll({raw: true}).then(function(data) {
       console.log('hello');
       res.json({
-        here: data
+      here: data
       });
-  
+      // var hbobj = {
+      //   students:data
+      // }
+      // res.render("InputData", hbobj)
       // console.log(data)
       // res.render("data/students", { arr: data })
     });
