@@ -17,47 +17,72 @@ var db = require('../models');
 //       students:data
 //     }
 //     res.render("data/students", hbobj)
-   
+
 //   })
 // };
-//omar did this exports.displau
+
+
 exports.getStudentData = function (req, res) {
   db.Student.findAll({ raw: true }).then(function (data) {
-    console.log('hello');//this console to terminal and not console in html page
+
+    var met = [];
+    var almostMet = [];
+    var didntMeet = [];
+
+    console.log(data);
+
     for (var i = 0; i < data.length; i++) {
-      console.log("info coming from controller:", data[i].first_name);
+      if (data[i].word_count > 100000) {
+
+        met.push(
+          {
+            first_name: data[i].first_name,
+            last_name: data[i].last_name,
+            word_count: data[i].word_count
+          }
+        );
+
+      }
+
+      else if (data[i].word_count < 100000 && data[i].word_count > 50000) {
+
+        almostMet.push(        
+          {
+            first_name: data[i].first_name,
+            last_name: data[i].last_name,
+            word_count: data[i].word_count
+          }
+        );
+
+      }
+
+      else if (data[i].word_count < 50000) {
+
+        didntMeet.push(
+          {
+            first_name: data[i].first_name,
+            last_name: data[i].last_name,
+            word_count: data[i].word_count
+          }
+        );
+      }
+
     }
+    //pass filtered data into view
+    // three sets of data - students who met, who almost met and who didn't meet
+    //sub problems:
+    // arrays of data - three different arrays 
+
     var hbobj = {
-      students:data
+      // student: data
+      met: met,
+      almostMet: almostMet,
+      didntMeet: didntMeet
     }
+
+    console.log("HBOBJ!", JSON.stringify(hbobj));
+
     res.render("data/students", hbobj)
 
   });
 };
-
-
-
-
-
-  //res.render('showData', {here: result})
-    // var queryString = "SELECT * FROM students";
-    // connection.query(queryString, function(err, result) {
-    //   console.log("testing")
-    //   if (err) throw err;
-    //   res.json({
-    //     here: result
-    //     });
-    // });
-
-
-
-  // console.log('hello');
-  // res.json({
-  // here: data
-  // });
-  // var hbobj = {
-  //   students:data
-  // }
-  // res.render("InputData", hbobj)
-  // console.log(data)
-  // res.render("data/students", { arr: data })

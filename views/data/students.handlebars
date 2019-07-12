@@ -14,7 +14,7 @@
                         <button class="btn btn-info" id="searchButton">Get Data</button>
                     </div>
                 </div>
-
+                 <h3>Student Who Met The Goal</h3>
                 <table class="table table-striped">
                     <thead>
                         <tr>
@@ -24,12 +24,46 @@
                         </tr>
                     </thead>
                     <tbody>
-                        {{#each students}}
-                        {{!-- {{#if cond1}}
-                        true
-                        {{else}}
-                        false
-                        {{/if}} --}}
+                        {{#each met}}
+                        <tr id="form-row">
+                            <td>{{first_name}}</td>
+                            <td>{{last_name}}</td>
+                            <td>{{word_count}}</td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+                 <h3>Student Who Almost Met The Goal</h3>
+                <table class="table table-striped">
+                    <thead>
+                       
+                        <tr>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Word Count</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each almostMet}}
+                        <tr id="form-row">
+                            <td>{{first_name}}</td>
+                            <td>{{last_name}}</td>
+                            <td>{{word_count}}</td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+                 <h3>Student Who Didn't Meet The Goal</h3>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Word Count</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each didntMeet}}
                         <tr id="form-row">
                             <td>{{first_name}}</td>
                             <td>{{last_name}}</td>
