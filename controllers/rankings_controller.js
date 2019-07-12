@@ -4,13 +4,28 @@ exports.index = function(req, res) {
   res.render('data/ranking');
 };
 
+exports.showRanks = function(req, res) {
+  db.Students.findAll({
+    where: {
+      homeroom_id: req.user.id
+    }
+  }).then(function(dbStudent) {
+    console.log(dbStudent);
+    res.render('data/ranking', {
+      layout: 'students',
+      student: dbStudent
+    });
+  });
+};
+
 exports.createTrip = function(req, res) {
 
   console.log(req.user);
-  // Add id from User onto req.body
-  req.body.UserId = req.user.id;
+  
+  req.body.homeroom_id = req.user.username;
 
-  db.InputD.create(req.body).then(function(dbPost) {
+  db.Students.create(req.body).then(function(dbPost) {
     res.json(dbPost);
   });
 };
+
