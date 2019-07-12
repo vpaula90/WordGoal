@@ -39,7 +39,7 @@ exports.signUpUser = function(req,res) {
         email: req.body.email,
         password: req.body.password
       }).then(function() {
-        res.send({redirect: '/data'});
+        res.send({redirect: '/'});
       }).catch(function(err) {
         res.json(err);
       });

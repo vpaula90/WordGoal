@@ -58,7 +58,6 @@ exports.getStudentData = function (req, res) {
 
       else if (data[i].word_count < 50000) {
 
-
     //res.render('showdData', {here: result})
     // var queryString = "SELECT * FROM students";
     // connection.query(queryString, function(err, result) {
