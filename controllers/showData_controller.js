@@ -38,6 +38,7 @@ exports.getStudentData = function (req, res) {
 
 
 
+<<<<<<< HEAD
 // exports.display = function(req, res) {
 //     db.Student.findAll({raw: true}).then(function(data) {
 //       console.log('hello');
@@ -51,6 +52,9 @@ exports.getStudentData = function (req, res) {
 //       // console.log(data)
 //       // res.render("data/students", { arr: data })
 //     });
+=======
+
+>>>>>>> master
 
     //res.render('showdData', {here: result})
     // var queryString = "SELECT * FROM students";
