@@ -1,26 +1,4 @@
 var db = require('../models');
-// var connection = require("../config/connection.js"); //this is linking to my database
-
-// exports.index = function(req, res) {
-//   db.Student.findAll({raw: true}).then(function(data) {
-//     for (var i = 0; i < data.length; i++) {
-//       console.log("info coming from controller:", data[i].first_name);
-//     }
-//     // console.log('hello');
-//     // res.json({
-//     //   here: data
-//     // });
-//     // console.log(data)
-//     // res.render("data/students", { arr: data })
-//     // res.render('data/wordcount');
-//     var hbobj = {
-//       students:data
-//     }
-//     res.render("data/students", hbobj)
-
-//   })
-// };
-
 
 exports.getStudentData = function (req, res) {
   db.Student.findAll({ raw: true }).then(function (data) {
@@ -66,8 +44,8 @@ exports.getStudentData = function (req, res) {
           }
         );
       }
-
     }
+  
     //pass filtered data into view
     // three sets of data - students who met, who almost met and who didn't meet
     //sub problems:
@@ -80,7 +58,6 @@ exports.getStudentData = function (req, res) {
       didntMeet: didntMeet
     }
 
-    console.log("HBOBJ!", JSON.stringify(hbobj));
 
     res.render("data/students", hbobj)
 

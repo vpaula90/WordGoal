@@ -19,6 +19,8 @@
                                 <th>Word Goal</th>
                                 <th>Word Count</th>
                                 <th>Update Word Count</th>
+                                 <th>Update Word Count Form</th>
+
                             </tr>
                         </thead>
                         <tbody>
@@ -29,6 +31,8 @@
                                 <td>{{word_goal}}</td>
                                 <td>{{word_count}}</td>
                                 <td><input placeholder={{word_count}} id="author-name" type="text" /></td>
+                                   <td><form action="/" method="POST"><textarea type="text" name="word_count">{{word_count}}</textarea><button type="submit">Update</button></form></td>
+
                             </tr>
                             {{/each}}
                         </tbody>
@@ -36,11 +40,6 @@
 
                     <form id="author-form">
                         <td><button type="submit" class="btn btn-success">Update Word Count</button>
-                        <td colspan="4">
-                            <input placeholder="Enter a name" id="author-name" type="text" />
-                        </td>
-                        <td><button type="submit" class="btn btn-success">Create Author</button>
-                        </td>
                     </form>
 
                 </div>
