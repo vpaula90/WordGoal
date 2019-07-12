@@ -1,14 +1,14 @@
 {
   "development": {
     "username": "root",
-    "password": "GoingCrazy!23",
+    "password": "kash2003",
     "database": "wordgoal_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": "GoingCrazy!23",
+    "password": "kash2003",
     "database": "wordgoal_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
