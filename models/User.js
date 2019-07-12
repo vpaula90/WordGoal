@@ -34,15 +34,11 @@ module.exports = function(sequelize, DataTypes) {
   User.prototype.validPassword = function (password) {
     return bcrypt.compareSync(password, this.password);
   }
-<<<<<<< HEAD
-
-=======
   // User.associate = function(models) {
   //   // associations can be defined here
   //   User.hasMany(models.student, {
   //     onDelete: "cascade"
   //   });
   // }
->>>>>>> master
   return User;
 };
