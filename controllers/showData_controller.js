@@ -17,7 +17,7 @@ var db = require('../models');
 //       students:data
 //     }
 //     res.render("data/students", hbobj)
-   
+
 //   })
 // };
 //omar did this exports.displau
@@ -28,7 +28,7 @@ exports.getStudentData = function (req, res) {
       console.log("info coming from controller:", data[i].first_name);
     }
     var hbobj = {
-      students:data
+      students: data
     }
     res.render("data/students", hbobj)
 
@@ -38,19 +38,19 @@ exports.getStudentData = function (req, res) {
 
 
 
-exports.display = function(req, res) {
-    db.Student.findAll({raw: true}).then(function(data) {
-      console.log('hello');
-      res.json({
-      here: data
-      });
-      // var hbobj = {
-      //   students:data
-      // }
-      // res.render("InputData", hbobj)
-      // console.log(data)
-      // res.render("data/students", { arr: data })
-    });
+// exports.display = function(req, res) {
+//     db.Student.findAll({raw: true}).then(function(data) {
+//       console.log('hello');
+//       res.json({
+//       here: data
+//       });
+//       // var hbobj = {
+//       //   students:data
+//       // }
+//       // res.render("InputData", hbobj)
+//       // console.log(data)
+//       // res.render("data/students", { arr: data })
+//     });
 
     //res.render('showdData', {here: result})
     // var queryString = "SELECT * FROM students";
