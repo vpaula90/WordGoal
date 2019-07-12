@@ -36,7 +36,7 @@ module.exports = function(sequelize, DataTypes) {
   }
   User.associate = function(models) {
     // associations can be defined here
-    User.hasMany(models.InputD, {
+    User.hasMany(models.Trip, {
       onDelete: "cascade"
     });
   }

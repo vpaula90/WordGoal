@@ -1,39 +1,45 @@
-var db  = require('../models');
+var db = require('../models');
 // var connection = require("../config/connection.js"); //this is linking to my database
 
-exports.index = function(req, res) {
-  res.render('data/students');
-};
+// exports.index = function(req, res) {
+//   db.Student.findAll({raw: true}).then(function(data) {
+//     for (var i = 0; i < data.length; i++) {
+//       console.log("info coming from controller:", data[i].first_name);
+//     }
+//     // console.log('hello');
+//     // res.json({
+//     //   here: data
+//     // });
+//     // console.log(data)
+//     // res.render("data/students", { arr: data })
+//     // res.render('data/wordcount');
+//     var hbobj = {
+//       students:data
+//     }
+//     res.render("data/students", hbobj)
+   
+//   })
+// };
+//omar did this exports.displau
+exports.getStudentData = function (req, res) {
+  db.Student.findAll({ raw: true }).then(function (data) {
+    console.log('hello');//this console to terminal and not console in html page
+    for (var i = 0; i < data.length; i++) {
+      console.log("info coming from controller:", data[i].first_name);
+    }
+    var hbobj = {
+      students:data
+    }
+    res.render("data/students", hbobj)
 
-exports.createTrip = function(req, res) {
-
-  console.log(req.user);
-  // Add id from User onto req.body
-  req.body.UserId = req.user.id;
-
-  db.InputD.create(req.body).then(function(dbPost) {
-    res.json(dbPost);
   });
 };
 
-exports.display = function(req, res) {
-    db.Student.findAll({raw: true}).then(function(data) {
-      console.log('hello');
-      res.json({
-        here: data
-      });
-  
-      // console.log(data)
-      // res.render("data/students", {data: data.here })
-    });
-
-}
 
 
 
 
-
-    //res.render('showdData', {here: result})
+  //res.render('showData', {here: result})
     // var queryString = "SELECT * FROM students";
     // connection.query(queryString, function(err, result) {
     //   console.log("testing")
@@ -42,3 +48,16 @@ exports.display = function(req, res) {
     //     here: result
     //     });
     // });
+
+
+
+  // console.log('hello');
+  // res.json({
+  // here: data
+  // });
+  // var hbobj = {
+  //   students:data
+  // }
+  // res.render("InputData", hbobj)
+  // console.log(data)
+  // res.render("data/students", { arr: data })
