@@ -69,6 +69,7 @@ exports.getStudentData = function (req, res) {
     // });
 
     }
+  }
     //pass filtered data into view
     // three sets of data - students who met, who almost met and who didn't meet
     //sub problems:
