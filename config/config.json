@@ -1,14 +1,18 @@
 {
   "development": {
     "username": "root",
+<<<<<<< HEAD
     "password": "GoingCrazy!23",
+=======
+    "password": "kash2003",
+>>>>>>> master
     "database": "wordgoal_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": "MySql!23",
+    "password": "kash2003",
     "database": "wordgoal_db",
     "host": "127.0.0.1",
     "dialect": "mysql"

@@ -3,94 +3,41 @@
 {{> nav }}
 {{!-- {{> login-modal }} --}}
 
-<!-- Plans -->
+
 <section id='dataInfo'>
     <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <div id="classroom">
-                    <select id="homeroom">
-                        <option value="UTA">UTA</option>
-                        <option value="NYU">NYU</option>
-                        <option value="DePaul">DePaul</option>
-                        <option value="LSU">LSU</option>
-                    </select>
+
                     <div class="button">
                         <button class="btn btn-info" id="searchButton">Get Data</button>
                     </div>
                 </div>
 
-
-                <ul>
-                    
-                    {{#each data}}
-                        <li>
-                            <p>Name: {{first_name}}</p>
-                            <p>Word Count: {{word_count}}</p>
-                        </li>
-                    {{/each}}
-                </ul>
-            <br>
-            <table class="table" id="met">
-                <thead>
-                    <tr>
-                        <h4>Student Who Met the Goal</h4>
-                        <th scope="col">First Name</th>
-                        <th scope="col">Last Name</th>
-                        {{!-- <th scope="col">HomeRoom</th> --}}
-                <th scope="col">Word Count</th>
-                </tr>
-                </thead>
-                <tbody>
-                    <tr id="studentmet">
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <!-- Insert additional movie rows here -->
-                </tbody>
-                </table>
-                <br>
-                <table class="table" id="almostmet">
+                <table class="table table-striped">
                     <thead>
                         <tr>
-                            <h4>Student Who Almost Met the Goal</h4>
-                            <th scope="col">First Name</th>
-                            <th scope="col">Last Name</th>
-                            {{!-- <th scope="col">HomeRoom</th> --}}
-                            <th scope="col">Word Count</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Word Count</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr id="studentalmostmet">
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                        {{#each students}}
+                        {{!-- {{#if cond1}}
+                        true
+                        {{else}}
+                        false
+                        {{/if}} --}}
+                        <tr id="form-row">
+                            <td>{{first_name}}</td>
+                            <td>{{last_name}}</td>
+                            <td>{{word_count}}</td>
                         </tr>
-                        <!-- Insert additional movie rows here -->
+                        {{/each}}
                     </tbody>
                 </table>
-                <br>
-                <table class="table" id="notmet">
-                    <thead>
-                        <tr>
-                            <h4>Student Who Didn't the Goal</h4>
-                            <th scope="col">First Name</th>
-                            <th scope="col">Last Name</th>
-                            {{!-- <th scope="col">HomeRoom</th> --}}
-                            <th scope="col">Word Count</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr id="studentnotmet">
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <!-- Insert additional movie rows here -->
-                    </tbody>
-                </table>
-
             </div>
         </div>
 </section>
